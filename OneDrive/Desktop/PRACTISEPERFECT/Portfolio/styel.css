@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@700&family=Raleway:wght@200&family=Xanh+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&display=swap');
+:root {
+    --text-color: #ffffff;
+    --tex-paragraph: #d0d0d0;
+    --section-background: #141414;
+    --button-border-color: #4ce19e;
+    --contact-bg-color: #242424;
+    --form-text-color: #8b8b8b;
+    --transition: 250ms ease-in-out;
+    --invalid: hsl(7, 100%, 68%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-section {
+    background-color: var(--section-background);
+    color: var(--text-color);
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.header-section {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-bottom: 4rem;
+}
+
+.header-section>.div-two {
+    display: flex;
+    position: relative;
+}
+
+.header-section>.div-two>.social-links {
+    position: absolute;
+    top: 2rem;
+    left: 35%;
+}
+
+.header-section>.div-two>.social-links a {
+    text-decoration: none;
+}
+
+
+/* Research on back-ground -color Image */
+
+
+/* .header-section>.div-two>.social-links>a>img:hover {
+    background-image: var(--button-border-color);
+} */
+
+.header-section>.div-two>.profile-image img {
+    position: absolute;
+    margin-top: 7rem;
+    left: 1rem;
+    max-width: 80%;
+    width: 450;
+    height: 450;
+    border-radius: 50%;
+    border: 2px solid var(--button-border-color);
+    /* height: auto; */
+    z-index: 0;
+}
+
+.link-margin-left {
+    margin-left: 1.5rem;
+}
+
+.div-one {
+    position: relative;
+}
+
+.rings {
+    position: absolute;
+    left: -15%;
+    top: 24%;
+}
+
+.circle {
+    position: absolute;
+    left: 99%;
+    top: 72%;
+    z-index: 1;
+}
+
+.div-one a {
+    font-family: 'Bauhaus 93';
+    position: absolute;
+    top: 2rem;
+    left: 15%;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.div-one a>h2>span {
+    color: var(--button-border-color);
+}
+
+.div-one a>h2>span:hover {
+    color: var(--text-color);
+}
+
+.div-one>.text-section {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    margin-bottom: 1rem;
+}
+
+.div-one>.text-section>.div-one-heading {
+    font-family: 'Century Schoolbook';
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1.7rem;
+}
+
+.div-one>.text-section>.div-one-heading>span {
+    color: var(--button-border-color);
+}
+
+.div-one>.text-section>.div-one-paragraph {
+    color: var(--button-border-color);
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.7;
+    font-family: 'Dubai';
+}
+
+.div-one>button {
+    position: relative;
+    float: left;
+    margin-left: 15%;
+    margin-top: 75%;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.div-one>button::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--button-border-color);
+}
+
+.hr-line {
+    margin-left: 1.5rem;
+    max-width: 90%;
+    margin-bottom: 3rem;
+}
+
+.skills-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 10%;
+    margin-bottom: 7rem;
+}
+
+.skills-section>.mySkills {
+    margin-bottom: 1rem;
+}
+
+.skills-section>.mySkills>h3 {
+    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+    font-family: 'Sitka';
+}
+
+.skills-section>.mySkills>p {
+    font-size: 1.5rem;
+    font-family: 'Dubai';
+}
+
+.skills-section>.mySkills>.color {
+    color: #4ce19e;
+}
+
+.skills-section>.rings {
+    position: absolute;
+    left: 85%;
+    top: 20%;
+}
+
+.project-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 7rem;
+}
+
+.project-section>.project-div {
+    height: 450px;
+    position: relative;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 0;
+}
+
+.project-section>.project-div img {
+    width: 100%;
+    height: 350px;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.project-section>.align-items {
+    align-items: center;
+    text-align: center;
+}
+
+.project-heading {
+    font-size: 4rem;
+}
+
+.project-button {
+    position: relative;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 550;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.project-button::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--button-border-color);
+}
+
+.invisibility {
+    display: none;
+}
+
+.image-link:hover {
+    opacity: 0.5;
+    transition: var(--transition);
+}
+
+.visible {
+    color: var(--text-color);
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.project-div>h3 {
+    font-size: 1.7rem;
+}
+
+.project-div>p {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+.project-div>p>span {
+    margin: 10px;
+}
+
+.contact-section {
+    display: grid;
+    background-color: var(--contact-bg-color);
+    color: var(--text-color);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 7rem 0;
+    gap: 1rem;
+    height: 150vh;
+}
+
+.contact-section>.contact-text {
+    position: relative;
+    width: 100%;
+    max-width: 75%;
+}
+
+.contact-section>.contact-text>h2 {
+    position: absolute;
+    top: -3rem;
+    left: 0;
+    margin-bottom: 3rem;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 5rem;
+    color: var(--button-border-color);
+}
+
+.contact-section>.contact-text>p {
+    position: absolute;
+    top: 7rem;
+    left: 1rem;
+    font-family: 'Bitter', serif;
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+.contact-section>.contact-text>img {
+    position: absolute;
+    top: 18rem;
+    left: -20rem;
+}
+
+.contact-section>.form-div {
+    position: relative;
+    width: 100%;
+}
+
+.form {
+    margin-top: 10px;
+    position: absolute;
+    top: -5rem;
+    padding: 3rem;
+}
+
+.form>.input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid var(--form-text-color);
+    background: none;
+    /* outline: none; */
+    padding: 2.0rem 10rem;
+    color: var(--text-color);
+    text-align: left;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.form>.input::placeholder {
+    color: var(--button-border-color);
+    font-family: 'Bitter', serif;
+}
+
+.form>.message {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid var(--form-text-color);
+    background: none;
+    /* outline: none; */
+    color: var(--text-color);
+    text-align: left;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form>.message:focus-visible,
+.input:focus-visible {
+    outline: 2px dashed var(--invalid);
+    outline-offset: 2px;
+}
+
+.form>.message:invalid,
+.input:invalid {
+    outline-color: var(--invalid);
+}
+
+.form>.message:valid,
+.input:valid {
+    outline-color: var(--button-border-color);
+}
+
+.invalid-svg {
+    position: absolute;
+    right: 4rem;
+    margin-top: 2rem;
+    display: none;
+}
+
+.message+.invalid-svg {
+    position: absolute;
+    right: 4rem;
+    margin-top: 4.5rem;
+    display: none;
+}
+
+.form>.message:focus-visible:invalid~.invalid-svg,
+.input:focus-visible:invalid~.invalid-svg {
+    display: inline-block;
+}
+
+.form>.submit {
+    position: relative;
+    float: right;
+    margin-top: 1.5rem;
+    margin-right: 5rem;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 550;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.form>.submit::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--button-border-color);
+}
+
+.footer-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -8rem;
+}
+
+.footer-div>.footer-title {
+    margin-left: 1rem;
+    position: relative;
+}
+
+.footer-div>.footer-title h2 {
+    position: absolute;
+    margin-top: 30px;
+}
+
+.footer-div>.footer-title h2:hover {
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: serif;
+    cursor: pointer;
+}
+
+.footer-div>.footer-title span {
+    color: var(--button-border-color);
+}
+
+.footer-div>.footer-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer-div>.footer-icons>a {
+    text-decoration-line: none;
+    margin: 1.5rem;
+}
+
+#notification {
+    color: red;
+    font-size: 1.2rem;
+}
+
+
+/*  */
+
+@media(max-width:37.5em) {
+    .header-section {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 1rem;
+        border: 3px solid red;
+        height: 200vh;
+    }
+    .header-section>.div-two {
+        display: flex;
+        position: absolute;
+        top: 4rem;
+    }
+    .header-section>.div-two>.profile-image img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    .header-section>.div-two>.social-links img {
+        width: 1rem;
+        margin-bottom: 1rem;
+    }
+    .header-section>.div-two>.social-links {
+        position: absolute;
+        top: -3.0rem;
+        left: 45%;
+        border: 2px solid red;
+    }
+    .div-one a {
+        position: absolute;
+        top: 1rem;
+        left: 5%;
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 1.0rem;
+        font-weight: 700;
+    }
+    .div-one>.text-section {
+        position: absolute;
+        top: 50rem;
+        left: 5%;
+        text-align: center;
+        z-index: 1;
+    }
+    .div-one>.text-section>.div-one-heading {
+        font-size: 2.0rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 1.2rem;
+    }
+    .skills-section {
+        position: relative;
+        display: none;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 10%;
+        margin-bottom: 7rem;
+    }
+    .skills-section>.mySkills {
+        margin-bottom: 1rem;
+    }
+    .skills-section>.mySkills>h3 {
+        margin-bottom: 1.5rem;
+        font-size: 3.5rem;
+    }
+    .skills-section>.mySkills>p {
+        font-size: 1.5rem;
+    }
+}
